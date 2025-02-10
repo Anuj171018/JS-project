@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 0.5px solid rgb(222, 219, 219);
 }
 .sec1a{
     display: flex;
@@ -24,14 +25,18 @@
     border-radius: 100px;
     font-weight: 600;
 }
-.sec1b{
+.sec1b ul{
     display: flex;
     gap: 30px;
     font-size: 22px;
+    list-style: none;
 }
-.sec1b div{
+.sec1b1{
     text-decoration: none;
+    color: black;
+
 }
+
 .sec2{
     display: flex;
     align-items: center;
@@ -352,4 +357,129 @@
 
 .address{
     margin: 5px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sec11{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.sec11a{
+    display: flex;
+    gap: 20px;
+}
+.sec11a1 ul{
+    list-style: none;
+    text-decoration: none;
+}
+.sec11a2 ul{
+    list-style: none;
+    text-decoration: none;
+}
+.sec11a3 ul{
+    list-style: none;
+    text-decoration: none;
+}
+.sec11a4 ul{
+    list-style: none;
+    text-decoration: none;
+}
+.sec11a1 ul li{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.sec11a2 ul li{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.sec11a3 ul li{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.sec11a4 ul li{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.sec11 h4{
+    padding-left: 40px;
+}
+.sec11b1{
+    font-size: 20px;
+    font-weight: 700;
+}
+.follow{
+    font-size: 20px;
+    font-weight: 700;
+}
+.sec11b2{
+    display: flex;
+    font-size: 20px;
+    gap: 10px;
+}
+.sec11b3{
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 20px;
+}
+.sec11b4{
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 20px;
+}
+.sec12{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    margin-top: -5px;
+}
+.sec12b{
+    font-size: 15px;
+    padding-right: 10px;
+}
+.hr{
+    margin-top: -5px;
+    
 }
