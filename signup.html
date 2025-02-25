@@ -40,28 +40,32 @@
 
 
     <section class="sec22">
-        <h2>Order Now</h2>
+        <h2>Book Now</h2>
         <div class="sec22a1">
-            <form action="login.html">
+            <form action="login.html" onsubmit="return sign()">
                 <div class="sec22a1b1">
                     <label for="">&nbsp &nbsp &nbsp &nbsp &nbsp First name</label>
-                    <input type="text" placeholder="First Name" class="sec22a1b1c1">
+                    <input type="text" placeholder="First Name" class="sec22a1b1c1" id="fname">
                     <br>
                         <label for="">&nbsp &nbsp &nbsp &nbsp &nbsp  Last Name</label>
-                        <input type="text" placeholder="Last Name" class="sec22a1b1c1">
+                        <input type="text" placeholder="Last Name" class="sec22a1b1c1" id="lname">
                     
                 </div>
                 <div class="sec22a1b1">
                     <label for="">Moblie Number 1</label>
-                    <input type="text" placeholder="Moblie Number 1" class="sec22a1b1c1">
+                    <input type="text" placeholder="Moblie Number 1" class="sec22a1b1c1" id="mob1">
                     <br>
                         <label for="">Moblie Number 2</label>
-                        <input type="text" placeholder="Moblie number 2" class="sec22a1b1c1">
+                        <input type="text" placeholder="Moblie number 2" class="sec22a1b1c1" id="mob2">
                 
                 </div>
                 <div class="sec22a1b2">
-                    <label for="">Email</label>
-                    <input type="email" placeholder="abc@gmail.com" class="sec22a1b1c1">
+                    <label for="">Email &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="email" placeholder="abc@gmail.com" class="sec22a1b1c1" id="email">
+                </div>
+                <div class="password">
+                    <label for="">Password</label>
+                    <input type="email" placeholder="Password" class="password1" id="pass">
                 </div>
                 <div class="sec22a1b2 address">
                     <label for="">Address</label>
@@ -121,6 +125,6 @@
     </section>
 
 
-    
+    <script src="index.js"></script>
 </body>
 </html>
