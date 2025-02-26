@@ -7,6 +7,13 @@ function sign() {
     let email = document.querySelector('#email').value;
     let password = document.querySelector('#pass').value;
 
+    let abc = {
+        gmail :document.querySelector("#email").value,
+        passw :document.querySelector("#pass").value
+    }
+    localStorage.setItem("userdata",JSON.stringify(abc))
+
+
 
     if (fname === '') {
         alert("Please enter your First Name");
@@ -53,4 +60,26 @@ function sign() {
     }
 
     return true; 
+}
+
+
+let data=JSON.parse(localStorage.getItem("userdata"))
+const up =()=>{
+    let obj ={
+        smail :document.querySelector("#mail").value,
+        pword :document.querySelector("#pword").value,
+    }
+    
+    if(data.gmail !=obj.smail)
+    {
+        alert("Please enter correct Email")
+        return false
+    }
+    else if (data.passw!=obj.pword){
+        alert("Please enter correct Password")
+        return false
+    }
+
+
+    
 }
