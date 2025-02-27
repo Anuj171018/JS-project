@@ -10,15 +10,19 @@ function sign() {
     let email = document.querySelector('#email').value;
     let password = document.querySelector('#pass').value;
 
+    localStorage.setItem("First_name",fname)
+    localStorage.setItem("Last_name",lname)
+
+
     let abc = {
         gmail: email,
         passw: password
     };
 
     localStorage.setItem("userdata", JSON.stringify(abc));
-    console.log("User registered:", abc); // Debugging
+    console.log("User registered:", abc); 
 
-    // Validation checks
+    
     if (fname === '') {
         alert("Please enter your First Name");
         document.querySelector('#fname').focus();
@@ -154,12 +158,74 @@ let fair
 //     return true; 
 // }
 
+
+
+
+async function fetdata(){
+    let data = await fetch("http://localhost:3000/Rider")
+    let res = await data.json()
+    let tdata = res.map((e)=>`
+    <tr>
+    <td>${e.id}</td>
+    <td>${e.First_name}</td>
+    <td>${e.Last_name}</td>
+    <td>${e.Pickup}</td>
+    <td>${e.Destination}</td>
+    <td>${e.Fair}</td>
+    <td><button onclick="mydelete('${e.id}')">Delete</button></td>
+    <td><button onclick="myride('${e.id}')">Book</button></td>
+    </tr>
+    `).join("")
+
+    document.querySelector("#displaydata").innerHTML=tdata
+    
+}
+
+fetdata()
+
+function mydelete(id){
+    fetch(`http://localhost:3000/Rider/${id}`,{
+        method:"DELETE"
+    })
+    .then(res=>alert("Ride has been canceled"))
+    location.reload()
+}
+
+
+
+
+
+
+
+
+
+
+
+
 let a = "M.P Nagar";
 let b = "Ashoka Garden";
 
 function dist() {
     let pick = document.querySelector("#pickup").value
     let destination = document.querySelector("#destination").value
+
+    let frmdata = {
+        First_name:localStorage.getItem("First_name"),
+        Last_name:localStorage.getItem("Last_name"),
+        Pickup:document.querySelector("#pickup").value,
+        Destination:document.querySelector("#destination").value,
+        Fair:45
+        
+    }
+    fetch("http://localhost:3000/Rider",{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify(frmdata)
+    })
+    .then(r=>alert("Ride has been booked"))
+    
 
     if (pick === "") {
         alert("Please enter the pickup location");
@@ -179,3 +245,31 @@ function dist() {
         return false; 
     }
 }
+
+
+
+
+
+
+
+
+// function savedata(){
+//     let frmdata = {
+//         Fisrt_name:document.querySelector("#fname").value,
+//         Last_name:document.querySelector("#lname").value,
+//         Pickup:document.querySelector("#pickup").value,
+//         Destination:document.querySelector("#destination").value,
+//         Fair:45
+        
+//     }
+//     fetch("http://localhost:3000/Rider",{
+//         method:"POST",
+//         headers:{
+//             "Content-type":"application/json"
+//         },
+//         body:JSON.stringify(frmdata)
+//     })
+//     .then(r=>alert("Ride has been booked"))
+// }
+
+// savedata()
