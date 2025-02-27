@@ -4,58 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pickup & Destination</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: rgb(243, 221, 225);
-            text-align: center;
-            padding: 50px;
-        }
-        .sec50 {
-            background: white;
-            padding: 20px;
-            width: 300px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        #pickup,#destination, button {
-            width: 100%;
-            
-            padding-left: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #d4cfcf;
-        }
-        .sec50a{
-            background-color: rgb(51, 51, 199);
-            color: white;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        .sec50a:hover {
-            background-color: rgb(45, 45, 180);
-        }
+       
     </style>
 </head>
-<body>
+<body class="sec49">
+
+
+    <section class="sec1">
+        <div class="sec1a">
+            <div><img src="Lyft.jpg" alt="" height="80px" width="100px"></div>
+            <div><button class="sec1a1">Get a ride</button></div>
+        </div>
+        <div class="sec1b">
+            <ul>
+                <li>DRIVER</li>
+                <li>RIDER</li>
+                <li>BUSINESS</li>
+                <li><a href="" class="sec1b1">LOGIN</a></li>
+                <li><a href="signup.html" class="sec1b1">SIGN UP</a></li>
+                <li><i class="fa-solid fa-language"></i> EN</li>
+            </ul>
+
+      
+        </div>
+    </section>
+
+
+
+
+
+
+
 
     <div class="sec50">
         <h2>Enter Pickup & Destination</h2>
-        <form action="submit.html">
+        <form action="submit.html" onsubmit="return dist()">
             <label for="pickup">Pickup Point:</label>
             <input type="text" id="pickup" placeholder="Enter Pickup Location" required>
 
             <label for="destination">Destination:</label>
             <input type="text" id="destination" placeholder="Enter Destination" required>
 
-            <button type="submit" class="sec50a">Submit</button>
+            <input type="submit" class="sec50a">
+
+            <!-- <button type="submit" class="sec50a">Submit</button> -->
         </form>
     </div>
 
+
+
+
+
+    <section class="sec11">
+        <div class="sec11a">
+            <div class="sec11a1">
+                <h4>COLLECTIONS</h4>
+                <ul>
+                    <li>LYFT Automatics</li>
+                    <li>Police Batman</li>
+                    <li>Stellar</li>
+                    <li>Raga Power Pearls</li>
+                    <li>Nebula Ride</li>
+                    <li>Grandmaster</li>
+                    <li>Maritime</li>
+                </ul>
+            </div>
+            <div class="sec11a2">
+                <h4>CUSTOMER SERVICE</h4>
+                <ul>
+                    <li>Payment Options</li>
+                    <li>Track Ride</li>
+                    <li>Encircle Program</li>
+                    <li>Find Country We Are In</li>
+                </ul>
+            </div>
+            <div class="sec11a3">
+                <h4>CONTACT US</h4>
+                <ul>
+                    <li>1800-266-0123</li>
+                    <li>customercare@LYFT.co.in</li>
+                    <li>Help & Contact</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+            <div class="sec11a4">
+                <h4>ABOUT LYFT</h4>
+                <ul>
+                    <li>Brand Protection</li>
+                    <li>Corporate</li>
+                    <li>Careers</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sec11b">
+            <p class="sec11b1">Download Lyft World App</p>
+            <img src="app.png" alt="" height="40px" width="250px">
+            <p class="follow">Follow Us With</p>
+            <div class="sec11b2">
+                
+                <div><i class="fa-brands fa-facebook"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+                <div><i class="fa-brands fa-square-twitter"></i></div>
+                <div><i class="fa-brands fa-square-youtube"></i></div>
+            </div>
+            <p class="sec11b3">Want Help? Click Here To Chat With <br>Us On</p>
+            
+        </div>
+    
+    </section>
+    <hr class="hr"> 
+
+    <section class="sec12">
+        <div class="sec12a">
+            <img src="visa.png" alt="" width="700px">
+        </div>
+        <div class="sec12b">
+            <p>© 2024 Lyft Company Limited. All Rights Reserved.</p>
+            <p>Terms & Conditions &nbsp; |&nbsp;  Privacy Policy &nbsp; </p>
+        </div>
+    </section>
+
+
+
+<script src="index.js"></script>
 </body>
 </html>

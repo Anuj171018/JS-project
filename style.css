@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     border: 0.5px solid rgb(222, 219, 219);
+    background-color: white;
 }
 .sec1a{
     display: flex;
@@ -260,10 +261,16 @@
     font-size: 14px;
     background-color: #f2f2f2;
     width: 600px;
-    padding: 25px;
+    /* padding: 25px; */
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25PX;
+    padding-bottom: 25px;
     margin: 50px auto 0;
     border-top: 5px solid rgb(51, 51, 199);
     box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+
+    
 }
 .sec10 h2{
     font-size: 22px;
@@ -426,6 +433,52 @@ position: absolute;
 
 
 
+
+
+
+
+
+
+.sec49 {
+    font-family: Arial, sans-serif;
+    background-color: rgb(243, 221, 225);
+    text-align: center;
+    /* padding: 50px; */
+}
+.sec50 {
+    background: white;
+    /* padding: 20px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#pickup,#destination, .sec50a {
+    width: 100%;
+    
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #d4cfcf;
+}
+.sec50a{
+    background-color: rgb(51, 51, 199);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.sec50a:hover {
+    background-color: rgb(45, 45, 180);
+}
 
 
 
