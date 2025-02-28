@@ -7,6 +7,8 @@
     justify-content: space-between;
     border: 0.5px solid rgb(222, 219, 219);
     background-color: white;
+    position: sticky;
+    top: 0;
 }
 .sec1a{
     display: flex;
