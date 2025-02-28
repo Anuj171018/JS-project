@@ -172,7 +172,7 @@ async function fetdata(){
     <td>${e.Pickup}</td>
     <td>${e.Destination}</td>
     <td>${e.Fair}</td>
-    <td><button onclick="mydelete('${e.id}')">Delete</button></td>
+    <td><button onclick="mydelete('${e.id}')">Cancel ride   </button></td>
     <td><button onclick="myride('${e.id}')">Book</button></td>
     </tr>
     `).join("")
@@ -183,12 +183,16 @@ async function fetdata(){
 
 fetdata()
 
+function myride(id){
+    location.assign('book.html')
+}
+
 function mydelete(id){
     fetch(`http://localhost:3000/Rider/${id}`,{
         method:"DELETE"
     })
-    .then(res=>alert("Ride has been canceled"))
-    location.reload()
+
+    location.assign("ride.html")
 }
 
 
@@ -224,7 +228,7 @@ function dist() {
         },
         body:JSON.stringify(frmdata)
     })
-    .then(r=>alert("Ride has been booked"))
+    
     
 
     if (pick === "") {
